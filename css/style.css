@@ -31,13 +31,29 @@ p{
     margin: 0 auto;
     padding: 0 5%;
 }
+
+.btn{
+    background-color: #04a00a;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.4s;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #04a00a;
+}
+
 /* IMAGEM DE FUNDO */
 header{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
-/* MENU */
+/* END IMAGEM DE FUNDO */
 nav{
     display: flex;
     align-items: center;
@@ -56,4 +72,42 @@ nav ul a{
     text-transform: uppercase;
     font-size: 14px;
     display: block;
+}
+
+nav ul a:not(.btn):after{
+    content: "";
+    background-color: #04a00a;
+    border-radius: 1.5px;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner .banner-text{
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1{
+    font-size: 96px;
+    color:white;
+}
+
+.banner .banner-text p{
+    font-size: 20px;
+    color: #f9f9f9;
+    font-weight: lighter;
+    margin: 18px 0;
 }
