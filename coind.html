@@ -1,38 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>COIND</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>COIND</title>
 </head>
 <body>
-    <!-- HEADER -->
-    <header style="background-image: url(img/BG\ COIND.png);">
-        <!-- CONTAINER CABEÇALHO -->
-        <div class="container">
-            <nav>
-                <a href="coind.html">
-                    <img src="img/COIND.png" alt="Logo">
-                </a>
-                <ul class="ul">
-                    <a href="coind.html">COIND</a>
-                    <a href="sobre.html">SOBRE</a>
-                    <a href="contato.html">CONTATO</a>
-                    <a class="btn" href="#">ÁREA DO CLIENTE</a>
-                </ul>
-            </nav>
-            <section class="banner">
-                <div class="banner-text">
-                    <h1>COIND</h1>
-                    <p>Há 30 anos, realizamos sonhos por meio do cooperativismo, construindo lares e comunidades com união e propósito.</p>
-                    <a href="contato.hmtl" class="btn">Entre em Contato</a>
-                </div>
-            </section>
+  <!-- HEADER -->
+  <header style="background-image: url(img/BG%20COIND.png);">
+    <div class="container">
+      <nav id="navbar">
+        <a href="coind.html">
+          <img src="img/COIND.png" alt="Logo" />
+        </a>
+        <ul class="ul">
+          <a href="coind.html">COIND</a>
+          <a href="sobre.html">SOBRE</a>
+          <a href="contato.html">CONTATO</a>
+          <a class="btn" href="#">ÁREA DO CLIENTE</a>
+        </ul>
+      </nav>
+      <section class="banner">
+        <div class="banner-text">
+          <h1>COIND</h1>
+          <p>Há 30 anos, realizamos sonhos por meio do cooperativismo, construindo lares e comunidades com união e propósito.</p>
+          <a href="contato.html" class="btn">Entre em Contato</a>
         </div>
-        <!-- END CONTAINER CABEÇALHO -->
-    </header>
-    <!-- END HEADER -->
+      </section>
+    </div>
+  </header>
+
+  <!-- APRESENTAÇÃO COIND -->
+  <section class="apresentacao-coind">
+    <div class="container">
+      <div class="apresentacao-coind-text">
+        <h3>Construindo Sonhos com Cooperação</h3>
+        <p>A Coind é uma cooperativa habitacional com quase 30 anos de atuação em Araxá. Nascemos para enfrentar o déficit de moradia com soluções acessíveis e sustentáveis. Começamos com a entrega de loteamentos urbanizados e avançamos para a construção de casas completas. Já são mais de 2.400 lotes e 200 residências entregues. Nossa força vem da cooperação, promovendo desenvolvimento urbano, geração de renda e a realização do sonho da casa própria.</p>
+        <a href="sobre.html" class="btn-historia">Nossa História</a>
+      </div>
+      <div class="apresentacao-coind-img">
+        <img src="img/IMG1.png" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PEPS -->
+  <section class="peps">
+    <div class="container">
+      <div class="peps-img">
+        <img src="img/IMG2.png" alt="" />
+      </div>
+      <div class="peps-text">
+        <h3>Projetos Especiais para Cooperados (PEPs)</h3>
+        <p>Os PEPs são empreendimentos planejados pela Coind para atender diretamente às necessidades dos cooperados, unindo moradia digna, infraestrutura de qualidade e viabilidade econômica. Mais que habitações, são comunidades planejadas que promovem inclusão, desenvolvimento social e valorização patrimonial. Com foco no cooperativismo, os PEPs reforçam o compromisso da Coind com soluções habitacionais acessíveis, sustentáveis e justas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VÍDEO -->
+  <section class="video-apresentacao">
+    <h3>Nosso Último Lançamento - PEP 13</h3>
+    <div class="video-container">
+      <video class="video-coind" autoplay muted loop playsinline controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture>
+        <source src="videos/LOTEAMENTO.mp4" type="video/mp4" />
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </div>
+  </section>
+
+  <!-- PEP 13 -->
+  <section class="pep13">
+    <div class="container">
+      <div class="pep13-img">
+        <img src="img/IMG3.jpeg" alt="" onclick="openModal(0)" />
+        <img src="img/IMG4.jpeg" alt="" onclick="openModal(1)" />
+        <img src="img/IMG5.jpeg" alt="" onclick="openModal(2)" />
+      </div>
+      <div id="zoomModal" class="zoom-modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="zoomedImage" src="" alt="" />
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <button class="next" onclick="nextImage()">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRETORES -->
+  <section class="diretores">
+    <div class="container">
+      <h3>Nossa Administração</h3>
+      <p class="subtitulo">Conheça nossos diretores</p>
+      <div class="cards">
+        <div class="card-item">
+          <h3 class="nome-user">Luis Fernando da Silva</h3>
+          <p class="depoimento-user">Na Coind, liderar é mais do que dirigir — é guiar com propósito, inspirar confiança e manter viva a missão de transformar vidas por meio do cooperativismo.</p>
+          <h5>Diretor Presidente</h5>
+        </div>
+
+        <div class="card-item">
+          <h3 class="nome-user">Alessandro Henrique de Souza</h3>
+          <p class="depoimento-user">Na Coind, administrar é mais do que organizar processos — é garantir que cada decisão reflita cuidado, eficiência e o compromisso com nossos cooperados.</p>
+          <h5>Diretor Administrativo</h5>
+        </div>
+
+        <div class="card-item">
+          <h3 class="nome-user">Antônio Donizetti Trevisan</h3>
+          <p class="depoimento-user">Na Coind, gerir recursos é mais do que equilibrar contas — é investir com responsabilidade em dignidade, estrutura e oportunidades para todos.</p>
+          <h5>Diretor Financeiro</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU FIXO -->
+  <div id="hamburgerIcon" onclick="toggleMenu()">☰</div>
+  <div id="menuLinks">
+    <a href="coind.html">COIND</a>
+    <a href="sobre.html">SOBRE</a>
+    <a href="contato.html">CONTATO</a>
+    <a href="#">ÁREA DO CLIENTE</a>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="java/zoom.js"></script>
+  <script src="java/menufixo.js"></script>
 </body>
 </html>
