@@ -1,185 +1,212 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    font-family: 'Inter', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
 }
 
-body{
-    background-color: #f9f9f9;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #f9f9f9;
 }
 
 section,
-footer{
-    padding: 54px 0;
+footer {
+  padding: 54px 0;
 }
 
-h3{
-    font-size: 50px;
+h3 {
+  font-size: 50px;
 }
 
-p{
-    color: black;
+p {
+  color: black;
 }
 
-.container{
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 5%;
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
 }
 
-.btn{
-    background-color: #04a00a;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: inline-block;
-    transition: 0.4s;
+.btn {
+  background-color: #04a00a;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.4s;
 }
 
-.btn:hover{
-    background-color: white;
-    color: #04a00a;
+.btn:hover {
+  background-color: white;
+  color: #04a00a;
 }
 
 /* IMAGEM DE FUNDO */
-header{
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+header {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 /* END IMAGEM DE FUNDO */
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 30px;
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
 }
 
-nav ul{
-    display: flex;
-    align-items: center;
+nav ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-nav ul a{
-    color: white;
-    margin: 0 25px;
-    text-transform: uppercase;
-    font-size: 14px;
-    display: block;
+nav ul a {
+  color: white;
+  margin: 0 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: block;
 }
 
-nav ul a:not(.btn):after{
-    content: "";
-    background-color: #04a00a;
-    border-radius: 1.5px;
-    height: 3px;
-    width: 0%;
-    display: block;
-    margin: 0 auto;
-    transition: 0.3s;
+nav ul a:not(.btn):after {
+  content: "";
+  background-color: #04a00a;
+  border-radius: 1.5px;
+  height: 3px;
+  width: 0%;
+  display: block;
+  margin: 0 auto;
+  transition: 0.3s;
 }
 
-nav ul a:hover::after{
-    width: 100%;
+nav ul a:hover::after {
+  width: 100%;
 }
 
-.banner{
-    display: flex;
-    justify-content: center;
-}
-
-.banner .banner-text{
-    margin: 150px;
-    text-align: center;
-    padding: 0 90px;
-}
-
-.banner .banner-text h1{
-    font-size: 96px;
-    color:white;
-}
-
-.banner .banner-text p{
-    font-size: 20px;
-    color: #f9f9f9;
-    font-weight: lighter;
-    margin: 18px 0;
-}
-/* APRENSENTAÇÃO COIND */
-.btn-historia{
-    background-color: #04a00a;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 10px;
+/* MENU MOBILE*/
+nav .menu-icon{
     cursor: pointer;
-    display: inline-block;
-    transition: 0.4s;
+    font-size: 25px;
+    color: white;
+    display: none;
 }
-
-.btn-historia:hover{
-    background-color: #006805;
+nav .close-icon{
+    display: none;
+    font-size: 30px;
     color: white;
 }
 
-.apresentacao-coind .container{
-    display: flex;
-    align-items: center;
+/* FUNDO */
+.banner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.apresentacao-coind .apresentacao-coind-text{
-    width: 50%;
-    padding: 0 40px;
+.banner .banner-text {
+  margin: 150px;
+  text-align: center;
+  padding: 0 90px;
+  max-width: 100%;
 }
 
-.apresentacao-coind .apresentacao-coind-text h3{
-    font-size: 45px;
+.banner .banner-text h1 {
+  font-size: 96px;
+  color: white;
 }
 
-.apresentacao-coind .apresentacao-coind-text p{
-    margin: 5px 0 10px 0;
-    text-align: justify;
+.banner .banner-text p {
+  font-size: 20px;
+  color: #f9f9f9;
+  font-weight: lighter;
+  margin: 18px 0;
 }
 
-.apresentacao-coind .apresentacao-coind-img{
-    width: 50%;
+/* APRESENTAÇÃO COIND */
+.btn-historia {
+  background-color: #04a00a;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.4s;
 }
 
-.apresentacao-coind .apresentacao-coind-img img{
-    width: 100%;
+.btn-historia:hover {
+  background-color: #006805;
+  color: white;
 }
+
+.apresentacao-coind .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.apresentacao-coind .apresentacao-coind-text {
+  width: 50%;
+  padding: 0 40px;
+}
+
+.apresentacao-coind .apresentacao-coind-text h3 {
+  font-size: 45px;
+}
+
+.apresentacao-coind .apresentacao-coind-text p {
+  margin: 5px 0 10px 0;
+  text-align: justify;
+}
+
+.apresentacao-coind .apresentacao-coind-img {
+  width: 50%;
+}
+
+.apresentacao-coind .apresentacao-coind-img img {
+  width: 100%;
+  height: auto;
+}
+
 /* PEPS */
-.peps .container{
-    display: flex;
-    align-items: center;
+.peps .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.peps .peps-text{
-    width: 50%;
-    padding: 0 40px;
+.peps .peps-text {
+  width: 50%;
+  padding: 0 40px;
 }
 
-.peps .peps-text h3{
-    font-size: 45px;
+.peps .peps-text h3 {
+  font-size: 45px;
 }
 
-.peps .peps-text p{
-    margin: 5px 0 10px 0;
-    text-align: justify;
-  }
-  
-.peps .peps-img{
-    width: 50%;
+.peps .peps-text p {
+  margin: 5px 0 10px 0;
+  text-align: justify;
 }
 
-.peps .peps-img img{
-    width: 100%;
+.peps .peps-img {
+  width: 50%;
 }
+
+.peps .peps-img img {
+  width: 100%;
+  height: auto;
+}
+
 /* VIDEO */
 .video-apresentacao {
   text-align: center;
@@ -205,6 +232,7 @@ nav ul a:hover::after{
   pointer-events: none;
   display: block;
 }
+
 /* PEP 13 IMG */
 .pep13 {
   padding: 0 0;
@@ -228,7 +256,7 @@ nav ul a:hover::after{
   height: auto;
   border-radius: 6px;
   display: flex;
-  cursor: pointer; /* MÃO */
+  cursor: pointer;
 }
 
 /* ZOOM MODAL */
@@ -283,61 +311,93 @@ nav ul a:hover::after{
 .zoom-modal .next {
   right: 30px;
 }
+
 /* DIRETORES */
-.diretores h3{
-    text-align: center;
-    margin-top: 20px;
+.diretores h3 {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.subtitulo{
-    text-align: center;
-    margin-bottom: 15px;
-}
-.diretores p:not(.subtitulo){
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+.subtitulo {
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.diretores h5{
-    color: white;
-    margin-bottom: 10px;
+.diretores p:not(.subtitulo) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.cards{
-    display: flex;
-    justify-content: center;
+.diretores h5 {
+  color: white;
+  margin-bottom: 10px;
 }
 
-.diretores .card-item{
-    background-color: #049c0b;
-    margin: 15px;
-    border-radius: 14px;
-    text-align: center;
-    width: 350px;
-    transition: 0.4s;
-}
-.diretores .card-item img{
-    border-radius: 100%;
-    width: 80px;
-    display: block;
-    margin: 10px auto;
-}
-.diretores .card-item .nome-user{
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: white;
-}
-.diretores .card-item .depoimento-user{
-    font-size: 15px;
-    padding: 0 15px;
-    color: white;
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.diretores .card-item:hover{
-    background-color: #006805;
-    margin-top: -5px;
+.diretores .card-item {
+  background-color: #049c0b;
+  margin: 15px;
+  border-radius: 14px;
+  text-align: center;
+  width: 350px;
+  transition: 0.4s;
+}
+
+.diretores .card-item .nome-user {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.diretores .card-item .depoimento-user {
+  font-size: 15px;
+  padding: 0 15px;
+  color: white;
+}
+
+.diretores .card-item:hover {
+  background-color: #006805;
+  margin-top: -5px;
+}
+
+/* INTERESSE */
+.interesse {
+  text-align: center;
+}
+
+.grupo-botoes {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-interesse {
+  flex: 1;
+  background-color: #04a00a;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.4s;
+  min-width: 100px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-interesse:hover {
+  background-color: #006805;
+  color: white;
 }
 
 /* MENU FIXO */
@@ -357,7 +417,7 @@ nav ul a:hover::after{
   z-index: 10000;
 }
 
-/* BOTÃO HAMBÚRGUER PADRÃO (verde com linhas brancas) */
+/* BOTÃO HAMBÚRGUER PADRÃO */
 #hamburgerIcon {
   background: #04a00a;
   color: white;
@@ -378,7 +438,7 @@ nav ul a:hover::after{
   display: none;
 }
 
-/* BOTÃO ATIVO (branco com linhas verdes) */
+/* BOTÃO ATIVO */
 #hamburgerIcon.active {
   background: white;
   color: #04a00a;
@@ -421,3 +481,272 @@ nav ul a:hover::after{
   background-color: #f0f0f0;
 }
 
+@media (max-width: 830px){
+    /*MENU MOBILE²*/
+    .ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #006805;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        clip-path: circle(0% at 100% 0);   
+        transition: 0.7s;
+    }
+    .ul.open{
+        clip-path: circle(141.2% at 100% 0);
+    }
+    .ul a{
+        margin: 10px 0;
+        font-size: 16px;
+    }   
+   nav .menu-icon {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 25px;
+    color: white;
+    z-index: 9999;
+  }
+  
+    nav .close-icon{
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+}
+
+/* RESPONSIVIDADE GERAL */
+@media (max-width: 992px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .banner .banner-text {
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  .banner .banner-text h1 {
+    font-size: 60px;
+  }
+
+  .banner .banner-text p {
+    font-size: 18px;
+  }
+
+  .apresentacao-coind .container,
+  .peps .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .apresentacao-coind .apresentacao-coind-text,
+  .peps .peps-text {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .apresentacao-coind .apresentacao-coind-img,
+  .peps .peps-img {
+    display: none;
+  }
+
+  .diretores .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .diretores .card-item {
+    width: 90%;
+  }
+
+  .pep13-img img {
+    max-width: 90%;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 20px;
+    overflow-x: hidden;
+  }
+
+  .banner .banner-text h1 {
+    font-size: 32px;
+  }
+
+  .banner .banner-text p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .apresentacao-coind .apresentacao-coind-text h3,
+  .peps .peps-text h3, .video-apresentacao h3, .diretores h3{
+    font-size: 26px;
+  }
+
+  .apresentacao-coind .apresentacao-coind-text p,
+  .peps .peps-text p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .btn,
+  .btn-historia {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  nav ul a {
+    margin: 8px 0;
+  }
+}
+/* FOOTER */
+.footer{
+    background-color: #006805;
+    text-align: center;
+}
+.footer i{
+    color:#006805;
+    font-size: 19px;
+    background-color: white;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+.footer p{
+    margin-top: 10px;
+    color: white;
+}
+
+/* Mostrar/esconder baseado no dispositivo */
+.desktop-only {
+  display: block;
+}
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 830px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}
+
+/* Carrossel mobile */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 300%;
+}
+
+.carousel img {
+  width: 100vw;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Modal Zoom */
+.zoom-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.zoom-modal img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.zoom-modal .close,
+.zoom-modal .prev,
+.zoom-modal .next {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  top: 20px;
+}
+
+.zoom-modal .close {
+  right: 25px;
+}
+
+.zoom-modal .prev,
+.zoom-modal .next {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: none;
+  border: none;
+}
+
+.zoom-modal .prev {
+  left: 15px;
+}
+
+.zoom-modal .next {
+  right: 15px;
+}

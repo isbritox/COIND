@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css" />
   <title>COIND</title>
 </head>
 <body>
+
   <!-- HEADER -->
   <header style="background-image: url(img/BG%20COIND.png);">
     <div class="container">
@@ -20,7 +22,13 @@
           <a href="sobre.html">SOBRE</a>
           <a href="contato.html">CONTATO</a>
           <a class="btn" href="#">ÁREA DO CLIENTE</a>
+          <div class="cloese-icon" onclick="closeMenu()">
+           <i class="fa fa-times-circle"></i>
+          </div>
         </ul>
+        <div class="menu-icon" onclick="openMenu()">
+          <i class="fa fa-bars"></i>
+        </div>
       </nav>
       <section class="banner">
         <div class="banner-text">
@@ -59,19 +67,40 @@
     </div>
   </section>
 
-  <!-- VÍDEO -->
+  <!-- VÍDEO E GALERIA MOBILE -->
   <section class="video-apresentacao">
     <h3>Nosso Último Lançamento - PEP 13</h3>
-    <div class="video-container">
+
+    <!-- DESKTOP: Mostrar só vídeo -->
+    <div class="video-container desktop-only">
       <video class="video-coind" autoplay muted loop playsinline controlslist="nodownload nofullscreen noremoteplayback" disablepictureinpicture>
         <source src="videos/LOTEAMENTO.mp4" type="video/mp4" />
         Seu navegador não suporta a tag de vídeo.
       </video>
     </div>
+
+    <!-- MOBILE: Mostrar carrossel -->
+    <div class="carousel-container mobile-only">
+      <div class="carousel">
+        <img src="img/IMG3.jpeg" alt="Imagem 1" onclick="openModal(0)">
+        <img src="img/IMG4.jpeg" alt="Imagem 2" onclick="openModal(1)">
+        <img src="img/IMG5.jpeg" alt="Imagem 3" onclick="openModal(2)">
+      </div>
+      <button class="carousel-btn prev" onclick="prevSlide()">&#10094;</button>
+      <button class="carousel-btn next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <!-- MODAL ZOOM -->
+    <div id="zoomModal" class="zoom-modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="zoomedImage" src="" alt="">
+      <button class="prev" onclick="prevImage()">&#10094;</button>
+      <button class="next" onclick="nextImage()">&#10095;</button>
+    </div>
   </section>
 
   <!-- PEP 13 -->
-  <section class="pep13">
+  <section class="pep13 desktop-only">
     <div class="container">
       <div class="pep13-img">
         <img src="img/IMG3.jpeg" alt="" onclick="openModal(0)" />
@@ -114,6 +143,20 @@
     </div>
   </section>
 
+    <!-- INTERESSE -->
+  <section class="interesse">
+    <div class="container">
+      <div class="interesse-text">
+        <h3>Interesse do Cooperativista</h3>
+        <div class="grupo-botoes">
+          <a href="https://somoscooperativismo.coop.br" class="btn-interesse">Somos Cooperativismo</a>
+          <a href="https://sistemaocemg.coop.br" class="btn-interesse">Sistema Ocemg</a>
+          <a href="https://mundocoop.com.br" class="btn-interesse">Mundo Coop</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- MENU FIXO -->
   <div id="hamburgerIcon" onclick="toggleMenu()">☰</div>
   <div id="menuLinks">
@@ -123,8 +166,23 @@
     <a href="#">ÁREA DO CLIENTE</a>
   </div>
 
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="links">
+                <a href="#"> <i class="fa fa-facebook"></i></a>
+                <a href="#"> <i class="fa fa-instagram"></i></a>
+                <a href="#"> <i class="fa fa-github"></i></a>
+                <a href="#"> <i class="fa fa-linkedin"></i></a>
+            </div>
+            <p>Desenvolvido por LB System Brasil</p>
+        </div>
+    </footer>
+    <!--END FOOTER-->
+
   <!-- SCRIPTS -->
   <script src="java/zoom.js"></script>
   <script src="java/menufixo.js"></script>
+  <script src="java/menumobile.js"></script>
 </body>
 </html>
